@@ -1,0 +1,6 @@
+DUCTF{adv4ncedEncrypt3dShellCode}
+
+
+Can u f"?)
+$r13   : 0x2065687420646e69 ("ind the "?)
+$r14   : 0x2020203f67616c66 ("flag
