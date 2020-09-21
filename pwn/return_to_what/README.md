@@ -80,7 +80,17 @@ puts_leaked = u64(puts_leaked.ljust(8,b"\x00"))
 print("LEAK : ",hex(puts_leaked))
 ```
 
+## Finding the libc version
+
 After leaking the remote libc find out the libc version in the libc database. I used the online libc database.
+
+![leaked libc](Pictures/leaked_libc.png)
+
+Copy this leaked address that you have got and then paste it in the remote libc database as follows
+
+![remote libc](Pictures/remote_libc.png)
+
+Here you can see that two results are being given for the address. One of them is for 64 bit system and since we are dealing with a 64-bit binary, I used the amd64 version and it worked. You can even download the libc from here and use it.
 
 
 ## Calculating Libc base and other offsets

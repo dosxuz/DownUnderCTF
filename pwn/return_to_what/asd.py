@@ -4,11 +4,11 @@ context.terminal = ["tmux", "splitw", "-v"]
 context.log_level = 'DEBUG'
 #for local
 elf = context.binary = ELF("./return-to-what")
-libc = ELF("./local_libc.so.6")
-#libc = ELF("./libc6_2.27-3ubuntu1_amd64.so")
-sh = gdb.debug("./return-to-what")
+#libc = ELF("./local_libc.so.6")
+libc = ELF("./libc6_2.27-3ubuntu1_amd64.so")
+#sh = gdb.debug("./return-to-what")
 #for remote
-#sh = remote("chal.duc.tf", 30003)
+sh = remote("chal.duc.tf", 30003)
 
 puts_got = p64(elf.got[b'puts'])
 puts_plt = p64(elf.plt[b'puts'])
